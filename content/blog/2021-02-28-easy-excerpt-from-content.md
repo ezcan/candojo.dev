@@ -1,23 +1,11 @@
----
-createdAt: 2021-02-28
-title: Easy excerpt from content
----
+# Rule of three
 
-You can add an excerpt easily by writing `<!--MORE-->` in lowercase in the content.
-
-<!--more-->
-(It is written right before this)
-
-Then continue on with the rest of the **markdown** content.
-
-```js{4,7}[posts.vue]
-computed: {
-  placeholderClasses() {
-    const classes = ['w-full','w-2/3','w-5/6'];
-    return [...Array.from(
-      { length: this.amount },
-      (value, index) => classes[index % classes.length]
-    )]; // repeats classes after one another
-  }
-},
 ```
+很重要，所以講三次！
+很重要，所以講三次！
+很重要，所以講三次！
+```
+
+你可能聽過這句老梗，但在撰寫程式的過程中，直接「複製」程式的做法通常不被認同，具體而言，如果複製了一段程式，當其中有部分片段需要更新時，就在你的程式中找出所有複製的片段；簡言之，貼的越多，錯的地方也就越多，這將大大的增加後續維護的成本。
+
+因此，三次法則是一條相當重要的經驗法則，具體作法是允許直接複製貼上程式碼一次，但如果相同的程式又出現了第三次以上，就應該使用一個新的子程式取代之。
